@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+             <div class="meal">
+                 <div class="ingredients">{{ingredients}}</div>
+                 <div class="title">{{title}}</div>
+                 <img class="pic" src="{{thumbnail}}" >
+                <a href class="herf" herf ="{{href}}"></a>
+                 
+             </div>
+         {{/each}}
+        </script>
+
+        <div id="search-container">
+    <input type="text" id="ingredient-input" placeholder=" Enter ingredient name">
+    <button onclick=getRecipe()>search</button> </div>
+
+    <div id="meals-container"></div>
+
+   
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>  
+</body>
+</html>
